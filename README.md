@@ -18,7 +18,7 @@ Semantic Segmentation". Here, the dense blocks are arranged and concatenated
 with long skip connections for state of the art performance on the CamVid dataset.
 
 ## Usage:
-```
+```python
 model = DenseNet3DImageNet121(input_shape=(in_size, in_size, in_dim, 1),
                           bottleneck=True,
                           reduction=0.5,
