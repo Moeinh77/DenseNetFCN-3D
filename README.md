@@ -17,6 +17,20 @@ paper "The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for
 Semantic Segmentation". Here, the dense blocks are arranged and concatenated
 with long skip connections for state of the art performance on the CamVid dataset.
 
+## Usage:
+'''
+model = DenseNet3DImageNet121(input_shape=(in_size, in_size, in_dim, 1),
+                          bottleneck=True,
+                          reduction=0.5,
+                          dropout_rate=0.0,
+                          weight_decay=1e-4,
+                          include_top=True, # since i have no layer after this model
+                          input_tensor=None,
+                          pooling='avg',
+                          classes=1,
+                          activation='sigmoid')
+'''
+
 ## Reference
 - [Densely Connected Convolutional Networks](https://arxiv.org/pdf/1608.06993.pdf)
 - [The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for Semantic
