@@ -19,6 +19,12 @@ with long skip connections for state of the art performance on the CamVid datase
 
 ## Usage:
 ```python
+!git clone 'http://github.com/GalDude33/DenseNetFCN-3D.git'
+%cd DenseNetFCN-3D
+!pip install git+https://www.github.com/keras-team/keras-contrib.git
+
+from DenseNet3D import DenseNet3DImageNet121
+
 model = DenseNet3DImageNet121(input_shape=(in_size, in_size, in_dim, 1),
                           bottleneck=True,
                           reduction=0.5,
